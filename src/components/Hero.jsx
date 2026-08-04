@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import avatar from '../assets/avatar.png';
-
+import avatar from '../assets/foto-perfil.jpg';
 const greetings = ["Olá mundo!", "Hello world!", "Hola mundo!"];
 
 function AnimatedHello() {
