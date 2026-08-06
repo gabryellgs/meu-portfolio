@@ -82,25 +82,31 @@ export const projects = [
     badge: 'Mobile'
   },
   {
-    name: 'Find Sistema Django',
-    desc: 'API REST robusta para o ecossistema Find App, responsável pelo gerenciamento de usuários, serviços e localização de prestadores.',
-    techs: ['Python', 'Django', 'REST API', 'MySQL'],
+    name: 'Find - Sistema de Achados e Perdidos',
+    desc: 'Plataforma para conectar quem perdeu a quem achou. Match em tempo real, alertas automáticos e busca inteligente de itens.',
+    techs: ['Python', 'Django', 'REST API', 'MySQL', 'SQLite'],
     url: 'https://github.com/gabryellgs/Find-sitema',
+    github: 'https://github.com/gabryellgs/Find-sitema',
+    featured2: true,
+    image: new URL('../assets/find-preview.png', import.meta.url).href,
     icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-        <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-        <line x1="6" y1="6" x2="6.01" y2="6" />
-        <line x1="6" y1="18" x2="6.01" y2="18" />
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        <line x1="11" y1="8" x2="11" y2="14" />
+        <line x1="8" y1="11" x2="14" y2="11" />
       </svg>
     ),
-    badge: 'Backend'
+    badge: 'Web'
   },
   {
     name: 'NAV - Sistema de Agendamento',
-    desc: 'Plataforma web completa para agendamento online de consultas e serviços com backend estruturado em Node/Express e frontend em React.',
-    techs: ['Node.js', 'Express', 'React', 'MySQL'],
-    url: 'https://github.com/gabryellgs',
+    desc: 'Plataforma SaaS completa para agendamento online de barbearias. Gestão de clientes, controle de caixa e agendamento 24h.',
+    techs: ['Node.js', 'Express', 'React', 'PostgreSQL'],
+    url: 'https://nav-front-eight.vercel.app/',
+    github: 'https://github.com/gabryellgs',
+    image: new URL('../assets/nav-preview.png', import.meta.url).href,
+    featured: true,
     icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -109,7 +115,7 @@ export const projects = [
         <line x1="3" y1="10" x2="21" y2="10" />
       </svg>
     ),
-    badge: 'Web'
+    badge: 'SaaS'
   },
   {
     name: 'Smart Home IoT',
