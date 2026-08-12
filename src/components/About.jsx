@@ -70,112 +70,94 @@ export default function About() {
               em um lugar único no mundo do desenvolvimento web.
             </p>
 
-            <a href="#sobre-detalhes" className="know-more-btn" id="about-know-more">
-              Saiba Mais
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <path d="M10.5253 5.49475L10.5206 7.49475L15.0782 7.50541L5.47473 17.0896L6.88752 18.5052L16.5173 8.89479L16.5065 13.5088L18.5065 13.5134L18.5253 5.51345L10.5253 5.49475Z"/>
-              </svg>
-            </a>
 
-            {/* Stats — "Trusted by people worldwide" */}
+
+            {/* Soft Skills */}
             <div className="about-sticky-inner" style={{ marginTop: 0 }}>
-              <div style={{ textAlign: 'left', marginTop: '3.5rem', marginBottom: '1.5rem' }}>
-                <h3 style={{
+              <div style={{ marginTop: '3rem', width: '100%' }}>
+                <p style={{
                   fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(1.2rem,2.5vw,1.7rem)',
+                  fontSize: '0.68rem',
                   fontWeight: 700,
-                  letterSpacing: '-0.03em',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
                   color: '#1A1000',
-                  opacity: 0.7,
-                }}>
-                  Confiado por pessoas{' '}
-                  <em style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400 }}>
-                    ao redor
-                  </em>{' '}
-                  do mundo
-                </h3>
-              </div>
+                  opacity: 0.4,
+                  marginBottom: '1.5rem',
+                }}>Soft Skills</p>
 
-              <div className="about-stats-row">
-                <div className="about-stat-item">
-                  <div className="about-stat-num"><Counter target={21} suffix="+" /></div>
-                  <div className="about-stat-label">Repositórios GitHub</div>
-                </div>
-                <div className="about-stat-item">
-                  <div className="about-stat-num"><Counter target={8} suffix="+" /></div>
-                  <div className="about-stat-label">Projetos em Destaque</div>
-                </div>
-                <div className="about-stat-item">
-                  <div className="about-stat-num"><Counter target={15} suffix="+" /></div>
-                  <div className="about-stat-label">Tecnologias Dominadas</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.875rem' }}>
+                  {[
+                    { label: 'Resolução de Problemas', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg> },
+                    { label: 'Trabalho em Equipe',     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> },
+                    { label: 'Comunicação',             icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> },
+                    { label: 'Proatividade',            icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+                    { label: 'Adaptabilidade',          icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> },
+                    { label: 'Liderança',               icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> },
+                    { label: 'Criatividade',            icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2.5-2 4.5-2 7H9c0-2.5-2-4.5-2-7a5 5 0 0 1 5-5z"/><line x1="9" y1="17" x2="15" y2="17"/><line x1="10" y1="20" x2="14" y2="20"/></svg> },
+                    { label: 'Foco em Resultados',      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> },
+                  ].map(({ label, icon }) => (
+                    <div key={label}
+                      style={{
+                        padding: '1.75rem 1rem',
+                        background: 'rgba(255,255,255,0.18)',
+                        border: '1px solid rgba(255,255,255,0.35)',
+                        borderRadius: '20px',
+                        boxShadow: '0 2px 12px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6)',
+                        backdropFilter: 'blur(8px)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.875rem',
+                        textAlign: 'center',
+                        transition: 'all 0.35s cubic-bezier(0.34,1.56,0.64,1)',
+                        cursor: 'default',
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.transform = 'translateY(-6px)';
+                        e.currentTarget.style.background = 'rgba(255,255,255,0.3)';
+                        e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.7)';
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
+                        e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6)';
+                      }}
+                    >
+                      {/* Icon wrapper */}
+                      <div style={{
+                        width: '52px',
+                        height: '52px',
+                        borderRadius: '14px',
+                        background: 'rgba(26,16,0,0.08)',
+                        border: '1px solid rgba(26,16,0,0.12)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#1A1000',
+                        flexShrink: 0,
+                      }}>
+                        {icon}
+                      </div>
+                      <span style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '0.77rem',
+                        fontWeight: 700,
+                        color: '#1A1000',
+                        lineHeight: 1.4,
+                        letterSpacing: '-0.01em',
+                      }}>{label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
           </div>
+        </div>
         </div>
       </div>
 
-      {/* ══════════ DETAIL SECTION ══════════ */}
-      <section className="about-section" id="sobre-detalhes">
-        <div className="container">
-          <Reveal>
-            <div className="sec-header">
-              <span className="sec-tag">gabryell@root:~$ ./whoami.sh</span>
-              <h2 className="sec-title">Quem é o <span className="italic">Gabryell?</span></h2>
-              <div className="sec-line"/>
-            </div>
-          </Reveal>
 
-          <div className="about-grid">
-            <Reveal delay={100}>
-              <div className="about-text">
-                <h3>Tecnologia, lógica e paixão por resolver problemas ⚡</h3>
-                <p>Sou <strong>Gabryell Gonçalves</strong>, Desenvolvedor Full Stack em formação no <strong>IFRN (Sistemas para Internet)</strong>, baseado no Rio Grande do Norte. Minha motivação é projetar produtos digitais que unam backends de altíssimo desempenho a interfaces fluidas e dinâmicas.</p>
-                <p>Minha jornada começou com o rigor do <strong>CS50 (Harvard)</strong>, construindo uma base inabalável em algoritmos. Mergulhei no universo Full Stack com foco em <strong>Node.js, Spring Boot, React, React Native e Django</strong>.</p>
-                <p>Mais do que colecionar frameworks, meu foco é dominar os fundamentos — arquitetar soluções lógicas, seguras e que geram impacto real no mundo.</p>
-                <div className="about-quote">
-                  <p>"Don't ever let somebody tell you you can't do something. You got a dream… <strong>you gotta protect it.</strong> If you want something, go get it. Period."</p>
-                  <cite>— Will Smith</cite>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={200}>
-              <div>
-                <div className="stats-grid">
-                  {[['21+','Repositórios'],['8+','Projetos'],['15+','Tecnologias'],['2+','Anos Codando']].map(([n,l]) => (
-                    <div key={l} className="stat-card">
-                      <div className="stat-number">{n}</div>
-                      <div className="stat-label">{l}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="timeline-card">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#A8E524" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:20,height:20}}>
-                      <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
-                      <line x1="9" y1="3" x2="9" y2="18"/>
-                      <line x1="15" y1="6" x2="15" y2="21"/>
-                    </svg>
-                    Jornada de aprendizado
-                  </h4>
-                  {[
-                    { s: 'CS50 — Harvard (Fundação Estudar)', t: 'Base sólida em Ciência da Computação, Algoritmos e C.' },
-                    { s: 'Sistemas para Internet — IFRN', t: 'Engenharia de software, modelagem de dados e sistemas corporativos.' },
-                    { s: 'Projetos Full Stack', t: 'Desenvolvimento end-to-end com React Native, Django e bancos relacionais.' },
-                    { s: 'Expansão & Arquitetura', t: 'Foco em Java, Spring Boot, Clean Architecture e AWS.' },
-                  ].map((item, i) => (
-                    <div key={i} className="tl-item">
-                      <div className="tl-dot-wrap"><div className="tl-dot"/></div>
-                      <div><span className="tl-strong">{item.s}</span><span className="tl-text">{item.t}</span></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
