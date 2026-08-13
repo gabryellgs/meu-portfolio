@@ -544,6 +544,143 @@ strong { color: var(--text); font-weight: 600; }
   text-align: center;
 }
 
+/* ─── SOFT SKILLS (mobile-first) ──────────────────────────── */
+.softskills-section {
+  margin-top: 2.75rem;
+  width: 100%;
+}
+
+.softskills-label {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1A1000;
+  opacity: 0.4;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Mobile-first: 2 columns */
+.softskills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Mobile: cards menores */
+@media (max-width: 479px) {
+  .softskill-card {
+    padding: 0.85rem 0.5rem 0.75rem;
+    gap: 0.45rem;
+    border-radius: 14px;
+  }
+  .softskill-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  .softskill-icon-wrap svg {
+    width: 17px;
+    height: 17px;
+  }
+  .softskill-label-text {
+    font-size: 0.63rem;
+  }
+  .softskill-num {
+    font-size: 0.52rem;
+    top: 6px;
+    right: 8px;
+  }
+}
+
+/* Tablet: 3 columns */
+@media (min-width: 540px) {
+  .softskills-grid { grid-template-columns: repeat(3, 1fr); gap: 0.875rem; }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 900px) {
+  .softskills-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+
+.softskill-card {
+  position: relative;
+  padding: 1.4rem 0.85rem 1.25rem;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.42);
+  border-radius: 20px;
+  box-shadow:
+    0 2px 14px rgba(0,0,0,0.07),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.35s ease,
+              background 0.25s ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.softskill-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.32);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.13),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* Decorative order number */
+.softskill-num {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #1A1000;
+  opacity: 0.15;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.softskill-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(26,16,0,0.09);
+  border: 1px solid rgba(26,16,0,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1A1000;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.softskill-card:hover .softskill-icon-wrap {
+  transform: scale(1.1) rotate(-5deg);
+  background: rgba(26,16,0,0.14);
+}
+
+.softskill-label-text {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1A1000;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+
 /* Know More button */
 .know-more-btn {
   display: inline-flex; align-items: center; gap: 10px;
